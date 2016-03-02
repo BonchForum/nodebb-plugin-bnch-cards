@@ -36,7 +36,9 @@ plugin.getCategories = function(data, callback) {
 
 		var i = 0, cids = [], finalTopics = [];
 		while (finalTopics.length < 8 && i < topics.topics.length) {
-			finalTopics.push(topics.topics[i]);
+
+			if (topics.topics[i].cid !== 21)
+				finalTopics.push(topics.topics[i]);
 
 			i++;
 		}
